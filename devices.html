@@ -31,6 +31,9 @@ h1 {
     background-color: #b4b4b4;
     text-align: center;
 }
+li:hover {
+    color: red;
+}
 </style>
 <body>
     <div>
@@ -40,24 +43,17 @@ h1 {
     </div>
     <nav class="sidebar">
         <li class="linklist">
-            <a id="demo" class="directlink" href="./index" onmouseover="mouseOver()" onmouseout="mouseOut()">
+            <a id="demo" class="directlink" href="./index">
                 Home
             </a>
         </li>
         <li class="linklist">
-            <a id="demo" class="directlink" href="./devices" onmouseover="mouseOver()" onmouseout="mouseOut()">
+            <a id="demo" class="directlink" href="./devices">
                 Configure Devices
             </a>
         </li>
     </nav>
 </body>
 <script>
-    function mouseOver() {
-      document.getElementById("demo").style.color = "red";
-    }
-    
-    function mouseOut() {
-      document.getElementById("demo").style.color = "black";
-    }
 </script>
 </html>
