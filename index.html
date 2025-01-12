@@ -56,7 +56,7 @@ a:hover {
 </body>
 <script>
     src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"
-    const file = ./data
+    const file = /data
     Papa.parse(file, {
         complete: function(results) {
             document.getElementById("output").innerText = JSON.stringify(results.data[0][0]);
