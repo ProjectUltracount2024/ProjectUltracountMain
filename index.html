@@ -58,7 +58,7 @@ a:hover {
     const file = href="./data"
     Papa.parse(file, {
         complete: function(results) {
-            document.getElementById("output").innerText = JSON.stringify(results.data[0][0]);
+            console.log(results.data);
         },
         error: function(error) {
             console.error('Error parsing CSV:', error);
