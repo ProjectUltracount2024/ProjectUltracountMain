@@ -37,7 +37,7 @@ a:hover {
 </style>
 <body>
     <div>
-        <h1 style="text-align:center">
+        <h1 id="output" style="text-align:center">
             Project Ultracount
         </h1>
     </div>
@@ -55,5 +55,15 @@ a:hover {
     </nav>
 </body>
 <script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"
+    const file = ./data
+    Papa.parse(file, {
+        complete: function(results) {
+            document.getElementById("output").innerText = JSON.stringify(results.data[0][0]);
+        },
+        error: function(error) {
+            console.error('Error parsing CSV:', error);
+        }
+    })
 </script>
 </html>
