@@ -58,10 +58,10 @@ a:hover {
     const file = href="./data"
     Papa.parse(file, {
         complete: function(results) {
-            console.log(results.data);
+            console.log("hello");
         },
         error: function(error) {
-            console.error('Error parsing CSV:', error);
+            console.log("noob");
         }
     })
 </script>
